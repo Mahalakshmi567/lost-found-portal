@@ -44,7 +44,7 @@ A full-stack Spring Boot web application that helps users report, search, and cl
 
 
 ### 🏠 Dashboard
-![Dashboard](src/main/resources/static/images/dashboard2png)
+![Dashboard2](src/main/resources/static/images/dashboard2.png)
 ### ➕ Add Lost Item
 ![Add Lost](src/main/resources/static/images/lost.png)
 ### ➕ Add found item
@@ -58,4 +58,4 @@ A full-stack Spring Boot web application that helps users report, search, and cl
 ### 👀edit item
 ![edit](src/main/resources/static/images/edit.png)
 ### 👀claim item
-![claim] (src/main/resources/static/images/claims.png)
+![claim](src/main/resources/static/images/claims.png)
