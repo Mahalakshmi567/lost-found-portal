@@ -40,13 +40,22 @@ A full-stack Spring Boot web application that helps users report, search, and cl
 ![Login](src/main/resources/static/images/login.png)
 
 ### 🏠 Dashboard
-![Dashboard](src/main/resources/static/images/dashboard.png)
+![Dashboard](src/main/resources/static/images/dashboard1.png)
 
+
+### 🏠 Dashboard
+![Dashboard](src/main/resources/static/images/dashboard2png)
 ### ➕ Add Lost Item
-![Add Lost](src/main/resources/static/images/add-item.png)
+![Add Lost](src/main/resources/static/images/lost.png)
+### ➕ Add found item
+![add found](src/main/resources/static/images/found.png)
 
 ### 📦 My Posts
-![My Posts](src/main/resources/static/images/my-posts.png)
+![My Posts](src/main/resources/static/images/myposts.png)
 
 ### 👀 View Claims
-![Claims](src/main/resources/static/images/claims.png)
+![Claims](src/main/resources/static/images/viewclaims.png)
+### 👀edit item
+![edit](src/main/resources/static/images/edit.png)
+### 👀claim item
+![claim] (src/main/resources/static/images/claims.png)
