@@ -34,5 +34,19 @@ A full-stack Spring Boot web application that helps users report, search, and cl
 - HTML, CSS, Bootstrap
 
 ---
+## 📸 Screenshots
 
-## 📁 Project Structure
+### 🔐 Login Page
+![Login](src/main/resources/static/images/login.png)
+
+### 🏠 Dashboard
+![Dashboard](src/main/resources/static/images/dashboard.png)
+
+### ➕ Add Lost Item
+![Add Lost](src/main/resources/static/images/add-item.png)
+
+### 📦 My Posts
+![My Posts](src/main/resources/static/images/my-posts.png)
+
+### 👀 View Claims
+![Claims](src/main/resources/static/images/claims.png)
