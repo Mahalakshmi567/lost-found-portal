@@ -1,0 +1,1686 @@
+/* ==========================
+   GLOBAL STYLES
+========================== */
+
+:root {
+
+    --beige: #F4EEE6;
+
+    --cream: #FFF8F0;
+
+    --burgundy: #6B1E2B;
+
+    --gold: #C8A95B;
+
+    --text-dark: #2D2D2D;
+
+    --border-light: #D8C7B5;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background: var(--beige);
+
+    font-family: 'Inter', sans-serif;
+
+    color: var(--text-dark);
+
+}
+
+/* ==========================
+   LOGIN PAGE
+========================== */
+
+.login-container{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+}
+
+.login-card{
+
+    width:450px;
+
+    background:var(--cream);
+
+    border:4px solid var(--burgundy);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:
+            0 10px 30px rgba(0,0,0,0.12);
+
+}
+
+.logo-circle{
+
+    width:90px;
+
+    height:90px;
+
+    background:var(--burgundy);
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:40px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    border:4px solid var(--gold);
+
+}
+
+.portal-title{
+
+    font-family:'Playfair Display', serif;
+
+    color:var(--burgundy);
+
+    margin-bottom:10px;
+
+    font-size:36px;
+}
+
+.portal-subtitle{
+
+    color:#666;
+
+    margin-bottom:30px;
+
+    line-height:1.6;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.form-group{
+
+    text-align:left;
+
+    margin-bottom:20px;
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+}
+
+.form-group input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:3px solid var(--border-light);
+
+    border-radius:20px;
+
+    background:white;
+
+    font-size:15px;
+
+    transition:0.3s;
+}
+
+.form-group input:focus{
+
+    outline:none;
+
+    border-color:var(--burgundy);
+
+    box-shadow:
+            0 0 12px rgba(107,30,43,0.15);
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.login-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:var(--burgundy);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.login-btn:hover{
+
+    background:#541520;
+
+    transform:translateY(-2px);
+}
+
+/* ==========================
+   REGISTER LINK
+========================== */
+
+.register-section{
+
+    margin-top:25px;
+
+    font-size:15px;
+}
+
+.register-section a{
+
+    color:var(--gold);
+
+    text-decoration:none;
+
+    font-weight:700;
+}
+
+.register-section a:hover{
+
+    text-decoration:underline;
+}
+
+/* ==========================
+   CARD STYLE FOR FUTURE USE
+========================== */
+
+.custom-card{
+
+    background:var(--cream);
+
+    border-radius:25px;
+
+    border:3px solid var(--border-light);
+
+    box-shadow:
+            0 8px 20px rgba(0,0,0,0.08);
+
+    padding:20px;
+}
+
+/* ==========================
+   VERIFIED BADGE
+========================== */
+
+.verified-badge{
+
+    background:var(--gold);
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+.success-message{
+
+    background:#d4edda;
+
+    color:#155724;
+
+    padding:12px;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    border:2px solid #c3e6cb;
+}
+
+.error-message{
+
+    background:#f8d7da;
+
+    color:#721c24;
+
+    padding:12px;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    border:2px solid #f5c6cb;
+}
+/* ==========================
+   DASHBOARD NAVBAR
+========================== */
+
+.custom-navbar{
+
+    background:#6B1E2B;
+
+    padding:18px 0;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+
+}
+
+.navbar-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+.logo-text{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.logo-text:hover{
+
+    color:#F4EEE6;
+
+}
+
+/* ==========================
+   NAV BUTTONS
+========================== */
+
+.nav-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.custom-btn{
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    color:white;
+
+    transition:0.3s;
+
+}
+
+.custom-btn:hover{
+
+    transform:translateY(-2px);
+
+    color:white;
+
+}
+
+.burgundy-btn{
+
+    background:#8A2435;
+
+}
+
+.warning-btn{
+
+    background:#B8860B;
+
+}
+
+.success-btn{
+
+    background:#5E8C61;
+
+}
+
+.danger-btn{
+
+    background:#A52A2A;
+
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero-card{
+
+    background:#FFF8F0;
+
+    border:3px solid #C8A95B;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+
+}
+
+.hero-card h1{
+
+    font-family:'Playfair Display',serif;
+
+    color:#6B1E2B;
+
+    font-size:42px;
+
+}
+
+.hero-card p{
+
+    font-size:18px;
+
+    color:#666;
+
+}
+
+/* ==========================
+   SEARCH CARD
+========================== */
+
+.search-card{
+
+    background:#FFF8F0;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+
+}
+
+.search-input{
+
+    width:100%;
+
+    border-radius:20px;
+
+    border:3px solid #D8C7B5;
+
+    padding:14px;
+
+}
+
+.search-input:focus{
+
+    outline:none;
+
+    border-color:#6B1E2B;
+
+}
+
+/* ==========================
+   SEARCH BUTTONS
+========================== */
+
+.search-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#6B1E2B;
+
+    color:white;
+
+    padding:14px;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+}
+
+.reset-btn{
+
+    width:100%;
+
+    display:block;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    background:#999;
+
+    color:white;
+
+    padding:14px;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+}
+
+.reset-btn:hover{
+
+    color:white;
+
+}
+
+/* ==========================
+   FILTER BUTTONS
+========================== */
+
+.filter-section{
+
+    margin-bottom:30px;
+
+}
+
+.filter-btn{
+
+    display:inline-block;
+
+    background:white;
+
+    border:2px solid #6B1E2B;
+
+    color:#6B1E2B;
+
+    text-decoration:none;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    margin-right:10px;
+
+    font-weight:600;
+
+}
+
+.filter-btn:hover{
+
+    background:#6B1E2B;
+
+    color:white;
+
+}
+
+/* ==========================
+   SECTION TITLE
+========================== */
+
+.section-title{
+
+    font-family:'Playfair Display',serif;
+
+    color:#6B1E2B;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================
+   ITEM CARDS
+========================== */
+
+.item-card{
+
+    background:#FFF8F0;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    border:3px solid #E4D8CA;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+
+    height:100%;
+
+}
+
+.item-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+
+}
+
+.item-image{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+}
+
+.item-content{
+
+    padding:20px;
+
+}
+
+.item-content h4{
+
+    color:#6B1E2B;
+
+    font-family:'Playfair Display',serif;
+
+    margin-bottom:15px;
+
+}
+
+.description{
+
+    color:#666;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================
+   STATUS BADGES
+========================== */
+
+.status-badge{
+
+    padding:8px 15px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.lost-badge{
+
+    background:#B8860B;
+
+    color:white;
+
+}
+
+.found-badge{
+
+    background:#5E8C61;
+
+    color:white;
+
+}
+
+/* ==========================
+   CLAIM BUTTON
+========================== */
+
+.claim-btn{
+
+    display:inline-block;
+
+    background:#C8A95B;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+.claim-btn:hover{
+
+    color:white;
+
+    background:#B89745;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+
+    margin-top:50px;
+
+    background:#6B1E2B;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+/* ==========================
+   MY POSTS PAGE
+========================== */
+
+.page-title{
+
+    font-family:'Playfair Display',serif;
+
+    color:#6B1E2B;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:42px;
+
+}
+
+.posts-container{
+
+    padding-top:30px;
+
+    padding-bottom:30px;
+
+}
+
+/* ITEM CARD */
+
+.my-post-card{
+
+    background:#FFF8F0;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    border:3px solid #E4D8CA;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+
+    height:100%;
+
+}
+
+.my-post-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+
+}
+
+.my-post-image{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+}
+
+.my-post-content{
+
+    padding:20px;
+
+}
+
+.my-post-content h5{
+
+    font-family:'Playfair Display',serif;
+
+    color:#6B1E2B;
+
+    margin-bottom:15px;
+
+}
+
+.my-post-content p{
+
+    color:#555;
+
+}
+
+/* STATUS */
+
+.post-status{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+.status-lost{
+
+    background:#B8860B;
+
+    color:white;
+
+}
+
+.status-found{
+
+    background:#5E8C61;
+
+    color:white;
+
+}
+
+/* ACTION BUTTONS */
+
+.action-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:15px;
+
+}
+
+.edit-btn{
+
+    background:#C8A95B;
+
+    color:white;
+
+    border:none;
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+.edit-btn:hover{
+
+    color:white;
+
+    background:#b59646;
+
+}
+
+.delete-btn{
+
+    background:#A52A2A;
+
+    color:white;
+
+    border:none;
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+.delete-btn:hover{
+
+    color:white;
+
+}
+
+.claims-btn{
+
+    background:#6B1E2B;
+
+    color:white;
+
+    border:none;
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+.claims-btn:hover{
+
+    color:white;
+
+}
+
+/* EMPTY STATE */
+
+.empty-posts{
+
+    background:#FFF8F0;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+}
+/* ==========================
+   MINI HEADER
+========================== */
+
+.mini-header{
+
+    background:#FFF8F0;
+
+    border-left:5px solid #6B1E2B;
+
+    border-radius:15px;
+
+    padding:15px 20px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.06);
+
+}
+
+.mini-title{
+
+    margin:0;
+
+    font-size:28px;
+
+    font-family:'Playfair Display', serif;
+
+    color:#6B1E2B;
+
+}
+
+.mini-subtitle{
+
+    margin:4px 0 0 0;
+
+    color:#777;
+
+    font-size:14px;
+
+}
+/* ==========================
+   CLAIM ITEM PAGE
+========================== */
+
+.claim-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+}
+
+.claim-card{
+
+    width:100%;
+
+    max-width:700px;
+
+    background:#FFF8F0;
+
+    border:3px solid #C8A95B;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+.claim-title{
+
+    font-family:'Playfair Display',serif;
+
+    color:#6B1E2B;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    font-size:40px;
+
+}
+
+.claim-subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:30px;
+
+}
+
+/* FORM GROUP */
+
+.claim-group{
+
+    margin-bottom:20px;
+
+}
+
+.claim-group label{
+
+    display:block;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#6B1E2B;
+
+}
+
+/* INPUTS */
+
+.claim-input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:3px solid #D8C7B5;
+
+    border-radius:20px;
+
+    background:white;
+
+    transition:0.3s;
+
+}
+
+.claim-input:focus{
+
+    outline:none;
+
+    border-color:#6B1E2B;
+
+    box-shadow:0 0 10px rgba(107,30,43,0.15);
+
+}
+
+/* TEXTAREA */
+
+.claim-textarea{
+
+    width:100%;
+
+    min-height:140px;
+
+    padding:14px;
+
+    border:3px solid #D8C7B5;
+
+    border-radius:20px;
+
+    resize:vertical;
+
+    transition:0.3s;
+
+}
+
+.claim-textarea:focus{
+
+    outline:none;
+
+    border-color:#6B1E2B;
+
+    box-shadow:0 0 10px rgba(107,30,43,0.15);
+
+}
+
+/* ERROR MESSAGE */
+
+.error-text{
+
+    color:#A52A2A;
+
+    font-size:14px;
+
+    margin-top:6px;
+
+}
+
+/* BUTTON */
+
+.claim-submit-btn{
+
+    width:100%;
+
+    background:#6B1E2B;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    font-size:16px;
+
+    transition:0.3s;
+
+}
+
+.claim-submit-btn:hover{
+
+    background:#541520;
+
+    transform:translateY(-2px);
+
+}
+
+/* ICON CIRCLE */
+
+.claim-icon{
+
+    width:90px;
+
+    height:90px;
+
+    background:#6B1E2B;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:40px;
+
+    margin:0 auto 20px;
+
+    border:4px solid #C8A95B;
+
+}
+/* ==========================
+   VIEW CLAIMS PAGE
+========================== */
+
+.claims-page{
+
+    padding:40px 20px;
+
+}
+
+/* HEADER CARD */
+
+.claims-header{
+
+    background:#FFF8F0;
+
+    border:3px solid #C8A95B;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+.claims-header h1{
+
+    font-family:'Playfair Display',serif;
+
+    color:#6B1E2B;
+
+    margin-bottom:10px;
+
+}
+
+.claims-header p{
+
+    color:#666;
+
+    margin:0;
+
+}
+
+/* TABLE CARD */
+
+.claims-card{
+
+    background:#FFF8F0;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    border:3px solid #E4D8CA;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+/* TABLE */
+
+.claims-table{
+
+    margin:0;
+
+}
+
+.claims-table thead{
+
+    background:#6B1E2B;
+
+    color:white;
+
+}
+
+.claims-table th{
+
+    padding:18px;
+
+    border:none;
+
+}
+
+.claims-table td{
+
+    padding:18px;
+
+    vertical-align:middle;
+
+}
+
+.claims-table tbody tr{
+
+    transition:0.3s;
+
+}
+
+.claims-table tbody tr:hover{
+
+    background:#F7F1EB;
+
+}
+
+/* CLAIMANT AVATAR */
+
+.claim-avatar{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#6B1E2B;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:bold;
+
+}
+
+/* EMPTY STATE */
+
+.no-claims{
+
+    background:#FFF8F0;
+
+    border-radius:25px;
+
+    padding:50px;
+
+    text-align:center;
+
+    border:3px dashed #C8A95B;
+
+}
+
+.no-claims h3{
+
+    color:#6B1E2B;
+
+    font-family:'Playfair Display',serif;
+
+}
+
+.no-claims p{
+
+    color:#666;
+
+}
+
+/* BACK BUTTON */
+
+.back-btn{
+
+    display:inline-block;
+
+    background:#6B1E2B;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    margin-top:20px;
+
+}
+
+.back-btn:hover{
+
+    color:white;
+
+    background:#541520;
+
+}
+/* ==========================
+   ADD ITEM PAGE
+========================== */
+
+.item-form-page{
+
+    min-height:100vh;
+
+    padding:40px 20px;
+
+}
+
+.item-form-card{
+
+    max-width:800px;
+
+    margin:auto;
+
+    background:#FFF8F0;
+
+    border:3px solid #C8A95B;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+.item-form-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:#6B1E2B;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:0 auto 20px;
+
+    font-size:40px;
+
+    border:4px solid #C8A95B;
+
+}
+
+.item-form-title{
+
+    text-align:center;
+
+    font-family:'Playfair Display',serif;
+
+    color:#6B1E2B;
+
+    margin-bottom:10px;
+
+}
+
+.item-form-subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:30px;
+
+}
+
+.item-group{
+
+    margin-bottom:20px;
+
+}
+
+.item-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#6B1E2B;
+
+}
+
+.item-input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:3px solid #D8C7B5;
+
+    border-radius:20px;
+
+    background:white;
+
+}
+
+.item-input:focus{
+
+    outline:none;
+
+    border-color:#6B1E2B;
+
+    box-shadow:0 0 10px rgba(107,30,43,0.15);
+
+}
+
+.item-textarea{
+
+    width:100%;
+
+    min-height:140px;
+
+    padding:14px;
+
+    border:3px solid #D8C7B5;
+
+    border-radius:20px;
+
+    resize:vertical;
+
+}
+
+.item-textarea:focus{
+
+    outline:none;
+
+    border-color:#6B1E2B;
+
+}
+
+.file-upload{
+
+    width:100%;
+
+    padding:12px;
+
+    border:3px dashed #C8A95B;
+
+    border-radius:20px;
+
+    background:white;
+
+}
+
+.submit-item-btn{
+
+    width:100%;
+
+    background:#6B1E2B;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+.submit-item-btn:hover{
+
+    background:#541520;
+
+}
+
+.error-text{
+
+    color:#A52A2A;
+
+    margin-top:5px;
+
+    font-size:14px;
+
+}
+/* ==========================
+   VIEW CLAIMS PAGE
+========================== */
+
+.claims-page{
+
+    min-height:100vh;
+
+    padding:40px 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+}
+
+.claims-card{
+
+    width:100%;
+
+    max-width:1000px;
+
+    background:#FFF8F0;
+
+    border:3px solid #C8A95B;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+.claims-title{
+
+    font-family:'Playfair Display',serif;
+
+    color:#6B1E2B;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+/* ==========================
+   TABLE STYLING
+========================== */
+
+.claims-table{
+
+    width:100%;
+
+    border-collapse:separate;
+
+    border-spacing:0 10px;
+
+}
+
+.claims-table thead th{
+
+    background:#6B1E2B;
+
+    color:white;
+
+    padding:12px;
+
+    text-align:center;
+
+    border:none;
+
+}
+
+.claims-table tbody tr{
+
+    background:white;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+
+    transition:0.3s;
+
+}
+
+.claims-table tbody tr:hover{
+
+    transform:scale(1.01);
+
+}
+
+.claims-table td{
+
+    padding:14px;
+
+    text-align:center;
+
+    border:none;
+
+    color:#333;
+
+}

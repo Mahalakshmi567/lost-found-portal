@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Login - Lost & Found Portal</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+          
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-card">
+
+       
+        <h1 class="portal-title">
+            Lostify
+        </h1>
+
+        <p class="portal-subtitle">
+            Helping people reconnect with their belongings.
+        </p>
+
+        <form method="post" action="/login">
+
+            <div class="form-group">
+
+                <label>Email Address</label>
+
+                <input type="email"
+                       name="username"
+                       placeholder="Enter your email"
+                       required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Password</label>
+
+                <input type="password"
+                       name="password"
+                       placeholder="Enter your password"
+                       required>
+
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+        <div class="register-section">
+
+            Don't have an account?
+
+            <a href="/register">
+                Create Account
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
