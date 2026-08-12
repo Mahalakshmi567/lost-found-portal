@@ -2,6 +2,9 @@ package com.lostfound.lostfoundportal.model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -17,7 +20,19 @@ public class User {
 
     private String password;
 
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    // Inverse side of Item.user - lets you call user.getItems() instead of
+    // itemRepository.findByUser(user). cascade + orphanRemoval means deleting
+    // a user also removes everything they posted (see UserService.deleteUser).
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Item> items = new ArrayList<>();
+
+    // Inverse side of ClaimRequest.user - the claims THIS user has filed on
+    // other people's items. Also cascades on delete for the same reason.
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ClaimRequest> claimRequests = new ArrayList<>();
 
     public User() {
     }
@@ -54,11 +69,27 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Role role) {
         this.role = role;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
+
+    public List<ClaimRequest> getClaimRequests() {
+        return claimRequests;
+    }
+
+    public void setClaimRequests(List<ClaimRequest> claimRequests) {
+        this.claimRequests = claimRequests;
     }
 }

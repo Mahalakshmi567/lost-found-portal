@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Possible Matches</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container item-form-page">
+
+    <div class="claims-header ticket-card fade-up" style="margin-bottom:26px;">
+
+        <p class="eyebrow" style="text-align:center; display:block;">Smart Matching</p>
+
+        <h1>Possible Matches</h1>
+
+        <p>
+            For your lost item:
+            <strong th:text="${lostItem.itemName}"></strong>
+        </p>
+
+    </div>
+
+    <div class="empty-state" th:if="${#lists.isEmpty(matches)}">
+        <h3>No likely matches yet</h3>
+        <p>We compare this against every found-item report. Check back later, or browse the dashboard directly.</p>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 mb-4"
+             th:each="match : ${matches}">
+
+            <div class="item-card">
+
+                <img th:if="${match.item.imagePath != null and !match.item.imagePath.isEmpty()}"
+                     th:src="@{'/uploads/' + ${match.item.imagePath}}"
+                     class="item-image">
+
+                <div class="item-content">
+
+                    <span class="match-score-badge"
+                          th:classappend="${match.score >= 70} ? 'match-high' : (${match.score >= 40} ? 'match-medium' : 'match-low')"
+                          th:text="${match.score} + '% match'">
+                    </span>
+
+                    <h4 th:text="${match.item.itemName}"></h4>
+
+                    <p class="description" th:text="${match.item.description}"></p>
+
+                    <p>📍 <span th:text="${match.item.location}"></span></p>
+
+                    <p>📅 <span th:text="${match.item.date}"></span></p>
+
+                    <p>📞 <span th:text="${match.item.contactInfo}"></span></p>
+
+                    <div class="mt-3">
+
+                        <a th:href="@{/claims/new/request/{id}(id=${match.item.id})}"
+                           class="claim-btn">
+                            Claim This Item
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <a href="/my-posts" class="back-btn">&larr; Back to My Posts</a>
+
+</div>
+
+</body>
+</html>

@@ -8,25 +8,35 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet">
+
 </head>
 
 <body>
 
 <div class="container posts-container">
 
-    <h1 class="page-title">
+    <h1 class="page-title fade-up">
         My Posts
     </h1>
+
     <div class="mini-header">
 
-    <div>
+        <div>
 
-        <p class="mini-subtitle">
-            Manage your lost and found reports
-        </p>
+            <p class="mini-subtitle">
+                Manage your lost and found reports
+            </p>
+        </div>
+
     </div>
 
-</div>
+    <div class="empty-state" th:if="${#lists.isEmpty(items)}">
+        <h3>You haven't posted anything yet</h3>
+        <p>Report a lost or found item from the dashboard and it will appear here.</p>
+    </div>
+
     <div class="row">
 
         <div class="col-lg-4 col-md-6 mb-4"
@@ -43,9 +53,6 @@
                     <h5 th:text="${item.itemName}">
                     </h5>
 
-                    <p th:text="${item.description}">
-                    </p>
-
                     <span th:if="${item.status=='LOST'}"
                           class="post-status status-lost">
                         LOST
@@ -55,6 +62,28 @@
                           class="post-status status-found">
                         FOUND
                     </span>
+
+                    <div th:if="${item.status == 'FOUND'}">
+                        <span class="verify-badge verify-submitted"
+                              th:if="${item.verificationStatus == null or item.verificationStatus.name() == 'SUBMITTED'}">
+                            Submitted - awaiting verification
+                        </span>
+                        <span class="verify-badge verify-pending"
+                              th:if="${item.verificationStatus != null and item.verificationStatus.name() == 'PENDING_VERIFICATION'}">
+                            Pending Verification
+                        </span>
+                        <span class="verify-badge verify-review"
+                              th:if="${item.verificationStatus != null and item.verificationStatus.name() == 'ADMIN_REVIEW'}">
+                            Under Admin Review
+                        </span>
+                        <span class="verify-badge verify-approved"
+                              th:if="${item.verificationStatus != null and item.verificationStatus.name() == 'APPROVED'}">
+                            &#10003; Approved - visible to everyone
+                        </span>
+                    </div>
+
+                    <p th:text="${item.description}">
+                    </p>
 
                     <div class="action-buttons">
 
@@ -72,6 +101,12 @@
                            th:href="@{/claims/item/{id}(id=${item.id})}"
                            class="claims-btn">
                             View Claims
+                        </a>
+
+                        <a th:if="${item.status == 'LOST'}"
+                           th:href="@{/matches/{id}(id=${item.id})}"
+                           class="claims-btn">
+                            Find Matches
                         </a>
 
                     </div>

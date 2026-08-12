@@ -17,6 +17,7 @@ import com.lostfound.lostfoundportal.model.User;
 
 import com.lostfound.lostfoundportal.service.ClaimRequestService;
 import com.lostfound.lostfoundportal.service.ItemService;
+import com.lostfound.lostfoundportal.service.NotificationService;
 import com.lostfound.lostfoundportal.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.validation.BindingResult;
@@ -27,14 +28,17 @@ public class ClaimRequestController {
         private final ClaimRequestService claimService;
 private final ItemService itemService;
 private final UserService userService;
+private final NotificationService notificationService;
 public ClaimRequestController(
         ClaimRequestService claimService,
         ItemService itemService,
-        UserService userService) {
+        UserService userService,
+        NotificationService notificationService) {
 
     this.claimService = claimService;
     this.itemService = itemService;
     this.userService = userService;
+    this.notificationService = notificationService;
 }
 
     @GetMapping("/new/request/{itemId}")
@@ -73,6 +77,8 @@ if (result.hasErrors()) {
     claimRequest.setUser(user);
 
     claimService.save(claimRequest);
+
+    notificationService.notifyItemClaimed(item, claimRequest);
 
     return "redirect:/dashboard";
 }
